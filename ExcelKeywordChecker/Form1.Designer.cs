@@ -42,6 +42,8 @@
             label4 = new Label();
             numStatusColumn = new NumericUpDown();
             groupBox1 = new GroupBox();
+            textBoxFilePath = new TextBox();
+            butBrowse = new Button();
             ((System.ComponentModel.ISupportInitialize)numIdColumn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numDescColumn).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numStatusColumn).BeginInit();
@@ -51,7 +53,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 23);
+            label1.Location = new Point(12, 56);
             label1.Name = "label1";
             label1.Size = new Size(381, 20);
             label1.TabIndex = 0;
@@ -59,16 +61,16 @@
             // 
             // keywordTextBox
             // 
-            keywordTextBox.Location = new Point(12, 46);
+            keywordTextBox.Location = new Point(12, 79);
             keywordTextBox.Name = "keywordTextBox";
             keywordTextBox.Size = new Size(378, 27);
             keywordTextBox.TabIndex = 1;
             // 
             // butRun
             // 
-            butRun.Location = new Point(12, 337);
+            butRun.Location = new Point(12, 370);
             butRun.Name = "butRun";
-            butRun.Size = new Size(378, 42);
+            butRun.Size = new Size(381, 42);
             butRun.TabIndex = 2;
             butRun.Text = "Запуск";
             butRun.UseVisualStyleBackColor = true;
@@ -77,7 +79,7 @@
             // multiKeywordCheckBox
             // 
             multiKeywordCheckBox.AutoSize = true;
-            multiKeywordCheckBox.Location = new Point(12, 141);
+            multiKeywordCheckBox.Location = new Point(12, 174);
             multiKeywordCheckBox.Name = "multiKeywordCheckBox";
             multiKeywordCheckBox.Size = new Size(329, 24);
             multiKeywordCheckBox.TabIndex = 3;
@@ -87,7 +89,7 @@
             // markAsDeletedCheckBox
             // 
             markAsDeletedCheckBox.AutoSize = true;
-            markAsDeletedCheckBox.Location = new Point(12, 81);
+            markAsDeletedCheckBox.Location = new Point(12, 114);
             markAsDeletedCheckBox.Name = "markAsDeletedCheckBox";
             markAsDeletedCheckBox.Size = new Size(221, 24);
             markAsDeletedCheckBox.TabIndex = 4;
@@ -98,7 +100,7 @@
             // deleteRowsCheckBox
             // 
             deleteRowsCheckBox.AutoSize = true;
-            deleteRowsCheckBox.Location = new Point(12, 111);
+            deleteRowsCheckBox.Location = new Point(12, 144);
             deleteRowsCheckBox.Name = "deleteRowsCheckBox";
             deleteRowsCheckBox.Size = new Size(217, 24);
             deleteRowsCheckBox.TabIndex = 5;
@@ -168,18 +170,37 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(numStatusColumn);
-            groupBox1.Location = new Point(12, 171);
+            groupBox1.Location = new Point(12, 204);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(378, 151);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Настройка колонок";
             // 
+            // textBoxFilePath
+            // 
+            textBoxFilePath.Location = new Point(12, 12);
+            textBoxFilePath.Name = "textBoxFilePath";
+            textBoxFilePath.Size = new Size(320, 27);
+            textBoxFilePath.TabIndex = 14;
+            // 
+            // butBrowse
+            // 
+            butBrowse.Location = new Point(338, 12);
+            butBrowse.Name = "butBrowse";
+            butBrowse.Size = new Size(55, 27);
+            butBrowse.TabIndex = 15;
+            butBrowse.Text = "...";
+            butBrowse.UseVisualStyleBackColor = true;
+            butBrowse.Click += ButBrowse_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(402, 391);
+            ClientSize = new Size(402, 424);
+            Controls.Add(butBrowse);
+            Controls.Add(textBoxFilePath);
             Controls.Add(groupBox1);
             Controls.Add(markAsDeletedCheckBox);
             Controls.Add(deleteRowsCheckBox);
@@ -189,9 +210,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MaximumSize = new Size(420, 438);
             MinimizeBox = false;
-            MinimumSize = new Size(420, 438);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Excel Keyword Filter";
@@ -219,5 +238,7 @@
         private Label label4;
         private NumericUpDown numStatusColumn;
         private GroupBox groupBox1;
+        private TextBox textBoxFilePath;
+        private Button butBrowse;
     }
 }

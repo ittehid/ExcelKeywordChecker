@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PackageProjectUrl>https://tehadm.ru/</PackageProjectUrl>
     <PackageIcon>icon.ico</PackageIcon>
-    <FileVersion>1.1</FileVersion>
-    <AssemblyVersion>1.1</AssemblyVersion>
+    <FileVersion>1.2</FileVersion>
+    <AssemblyVersion>1.2</AssemblyVersion>
     <Copyright>Alexandr Gedz</Copyright>
   </PropertyGroup>
 

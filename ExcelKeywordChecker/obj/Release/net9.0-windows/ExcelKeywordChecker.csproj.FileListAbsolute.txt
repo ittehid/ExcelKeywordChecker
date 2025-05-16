@@ -23,3 +23,4 @@ D:\Project\C#\ExcelKeywordChecker\ExcelKeywordChecker\obj\Release\net9.0-windows
 D:\Project\C#\ExcelKeywordChecker\ExcelKeywordChecker\obj\Release\net9.0-windows\ExcelKeywordChecker.pdb
 D:\Project\C#\ExcelKeywordChecker\ExcelKeywordChecker\obj\Release\net9.0-windows\ExcelKeywordChecker.genruntimeconfig.cache
 D:\Project\C#\ExcelKeywordChecker\ExcelKeywordChecker\obj\Release\net9.0-windows\ref\ExcelKeywordChecker.dll
+D:\Project\C#\ExcelKeywordChecker\ExcelKeywordChecker\obj\Release\net9.0-windows\ExcelKeywordChecker.sourcelink.json

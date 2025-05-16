@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Project\\C#\\ExcelKeywordChecker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20C22237-44C8-4F81-9B48-1BFF7F6E9B71}|ExcelKeywordChecker\\ExcelKeywordChecker.csproj|d:\\project\\c#\\excelkeywordchecker\\excelkeywordchecker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C22237-44C8-4F81-9B48-1BFF7F6E9B71}|ExcelKeywordChecker\\ExcelKeywordChecker.csproj|solutionrelative:excelkeywordchecker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{20C22237-44C8-4F81-9B48-1BFF7F6E9B71}|ExcelKeywordChecker\\ExcelKeywordChecker.csproj|d:\\project\\c#\\excelkeywordchecker\\excelkeywordchecker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20C22237-44C8-4F81-9B48-1BFF7F6E9B71}|ExcelKeywordChecker\\ExcelKeywordChecker.csproj|solutionrelative:excelkeywordchecker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,26 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\Project\\C#\\ExcelKeywordChecker\\ExcelKeywordChecker\\Form1.cs",
-              "RelativeDocumentMoniker": "ExcelKeywordChecker\\Form1.cs",
-              "ToolTip": "D:\\Project\\C#\\ExcelKeywordChecker\\ExcelKeywordChecker\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "ExcelKeywordChecker\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:26:04.385Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Project\\C#\\ExcelKeywordChecker\\ExcelKeywordChecker\\Form1.cs",
               "RelativeDocumentMoniker": "ExcelKeywordChecker\\Form1.cs",
               "ToolTip": "D:\\Project\\C#\\ExcelKeywordChecker\\ExcelKeywordChecker\\Form1.cs",
               "RelativeToolTip": "ExcelKeywordChecker\\Form1.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAcwKgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAcwLgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:36:16.734Z"
+              "WhenOpened": "2025-04-30T19:36:16.734Z",
+              "EditorCaption": ""
             }
           ]
         }

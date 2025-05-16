@@ -318,7 +318,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net9.0-windows"
+        "net9.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -326,7 +326,7 @@
       },
       "frameworks": {
         "net9.0-windows7.0": {
-          "targetAlias": "net9.0-windows",
+          "targetAlias": "net9.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -344,7 +344,7 @@
     },
     "frameworks": {
       "net9.0-windows7.0": {
-        "targetAlias": "net9.0-windows",
+        "targetAlias": "net9.0-windows7.0",
         "dependencies": {
           "ClosedXML": {
             "target": "Package",
@@ -370,7 +370,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

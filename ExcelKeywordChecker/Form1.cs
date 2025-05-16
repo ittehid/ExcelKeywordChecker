@@ -8,8 +8,7 @@ namespace ExcelKeywordChecker
         public Form1()
         {
             InitializeComponent();
-
-            // Устанавливаем значения по умолчанию для номеров столбцов
+            
             numIdColumn.Value = 1;
             numDescColumn.Value = 2;
             numStatusColumn.Value = 3;
@@ -17,6 +16,14 @@ namespace ExcelKeywordChecker
 
         private void ButRun_Click(object sender, EventArgs e)
         {
+            string filePath = textBoxFilePath.Text.Trim();
+
+            if (string.IsNullOrEmpty(filePath) || !File.Exists(filePath))
+            {
+                MessageBox.Show("Пожалуйста, выберите корректный Excel файл.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string keywordInput = keywordTextBox.Text.Trim();
 
             if (string.IsNullOrEmpty(keywordInput))
@@ -25,7 +32,7 @@ namespace ExcelKeywordChecker
                 return;
             }
 
-            if (!multiKeywordCheckBox.Checked && keywordInput.Contains(","))
+            if (!multiKeywordCheckBox.Checked && keywordInput.Contains(','))
             {
                 var result = MessageBox.Show(
                     "Обнаружены несколько ключевых слов, разделённых запятыми. Включить режим множественного поиска?",
@@ -38,8 +45,8 @@ namespace ExcelKeywordChecker
             }
 
             var keywords = multiKeywordCheckBox.Checked
-                ? keywordInput.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(k => k.Trim()).ToList()
-                : new List<string> { keywordInput };
+                ? keywordInput.Split([','], StringSplitOptions.RemoveEmptyEntries).Select(k => k.Trim()).ToList()
+                : [keywordInput];
 
             if (keywords.Count == 0)
             {
@@ -51,11 +58,7 @@ namespace ExcelKeywordChecker
 
             try
             {
-                string originalInput = "input.xlsx";
-                string backupPath = "input_checked.xlsx";
-                string inputPath = File.Exists(backupPath) ? backupPath : originalInput;
-
-                var workbook = new XLWorkbook(inputPath);
+                var workbook = new XLWorkbook(filePath);
                 var ws = workbook.Worksheet(1);
                 var lastUsedRow = ws.LastRowUsed();
 
@@ -87,7 +90,6 @@ namespace ExcelKeywordChecker
                         string desc = descCell.GetValue<string>();
                         string currentStatus = statusCell.GetValue<string>();
 
-                        // Пропуск строк, где статус уже "УДАЛЕННО" или "ПРОВЕРЕННО"
                         if (currentStatus.Equals("УДАЛЕННО", StringComparison.OrdinalIgnoreCase) ||
                             currentStatus.Equals("ПРОВЕРЕННО", StringComparison.OrdinalIgnoreCase))
                         {
@@ -118,7 +120,9 @@ namespace ExcelKeywordChecker
 
                     if (matches.Count > 0)
                     {
-                        string resultFile = deleteRowsCheckBox.Checked ? $"deleted_{keyword}.xlsx" : $"output_{keyword}.xlsx";
+                        string fileDirectory = Path.GetDirectoryName(filePath) ?? "";
+                        string fileNamePrefix = deleteRowsCheckBox.Checked ? "deleted_" : "output_";
+                        string resultFile = Path.Combine(fileDirectory, $"{fileNamePrefix}{keyword}.xlsx");
 
                         using (var outputWorkbook = new XLWorkbook())
                         {
@@ -145,6 +149,9 @@ namespace ExcelKeywordChecker
                     }
                 }
 
+                string backupPath = Path.Combine(
+                Path.GetDirectoryName(filePath) ?? "",
+                Path.GetFileNameWithoutExtension(filePath) + "_checked.xlsx");
                 workbook.SaveAs(backupPath);
                 workbook.Dispose();
 
@@ -170,6 +177,20 @@ namespace ExcelKeywordChecker
         {
             if (deleteRowsCheckBox.Checked)
                 markAsDeletedCheckBox.Checked = false;
+        }
+
+        private void ButBrowse_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new())
+            {
+                ofd.Filter = "Excel файлы (*.xlsx)|*.xlsx";
+                ofd.Title = "Выберите Excel файл";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    textBoxFilePath.Text = ofd.FileName;
+                }
+            }
         }
     }
 }
